@@ -11,7 +11,7 @@ def base(fg='text', bg='dark'):
 
 # Draws a space
 def separator():
-    return widget.Sep(**base(), linewidth=0, padding=5)
+    return widget.Sep(**base(), linewidth=0, padding=1)
 
 
 def icon(fg='text', bg='dark', fontsize=16, text="?"):
@@ -26,8 +26,8 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
-        text="  ", # Icon: nf-oct-triangle_left
-        fontsize=37,
+        text=" 󱎕", 
+        fontsize=42,
         padding=-2
     )
 
@@ -71,22 +71,11 @@ primary_widgets = [
 
     widget.TextBox(**base(bg='color4'), text=' ArchLinux'),
 
-    # icon(bg="color4", text=' '), # Icon: nf-fa-download 
-    # widget.CheckUpdates(
-    #     background=colors['color4'],
-    #     colour_have_updates=colors['text'],
-    #     colour_no_updates=colors['text'],
-    #     no_update_string='0',
-    #     display_format='{updates}',
-    #     update_interval=1800,
-    #     custom_command='checkupdates',
-    # ),
-
     powerline('color3', 'color4'),
 
-    icon(bg="color3", text=' '),  # Icon: nf-fa-feed
+    icon(bg='color3', text=' '),
     
-    widget.Prompt(name='prompt', **base(bg='color3'), prompt='{prompt}'),
+    widget.Net(interface="ens33", format="{ip}", **base(bg='color3')),
 
     powerline('color2', 'color3'),
 
@@ -96,7 +85,7 @@ primary_widgets = [
 
     powerline('color1', 'color2'),
 
-    icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
+    icon(bg="color1", fontsize=17, text='󰃭 '),
 
     widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
 
