@@ -2,13 +2,10 @@
 
 from libqtile.config import Screen
 from libqtile import bar
-from settings.widgets import primary_widgets, secondary_widgets
-import subprocess
-
+from settings.widgets import primary_widgets
 
 def status_bar(widgets):
-    return bar.Bar(widgets, 24, opacity=0.95)
-
+    return bar.Bar(widgets, 28, margin=[4, 6, 4, 6], opacity=0.95)
 
 screens = [
     Screen(top=status_bar(primary_widgets))
