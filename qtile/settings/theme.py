@@ -24,4 +24,4 @@ def load_theme():
     with open(path.join(theme_file)) as f:
         return json.load(f)
 
-    colors = load_theme()
+colors = load_theme()
