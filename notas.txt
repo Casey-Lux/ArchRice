@@ -37,5 +37,6 @@ neovim
 
 ### Configuración de qtile
 git clone https://github.com/Casey-Lux/ArchRice
+* Será necesario copiar los archivos de configuración a sus directorios
 * Es necesario que autostart.sh sea ejecutable
 
