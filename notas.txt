@@ -1,0 +1,41 @@
+# NOTAS
+
+## Paquetes:
+
+### Entorno gráfico básico (done)
+xorg-server
+xorg-xinit
+xorg-xrandr
+startx -> Al parecer viene incluido cuando instalo xorg 
+
+### Qtile (done)
+qtile
+python-psutil
+python-setuptools
+
+## Arranque con qtile (done)
+
+### Edita ~/.xinitrc
+* 'exec qtile start' -> Añade esa linea al final
+
+### Ejecuta (done)
+startx
+win + Enter -> para abrir una terminal
+win + ctrl + q -> para salir de qtile y volver a la terminal
+
+### Paquetes necesarios para mi configuración de qtile (done)
+picom 
+feh 
+dmenu 
+lightdm -> inicio gráfico, se puede eliminar / descartar 
+alacritty 
+screenfetch -> Puro lujo, nada más
+
+### Paquetes de utilidad (done)
+git
+neovim
+
+### Configuración de qtile
+git clone https://github.com/Casey-Lux/ArchRice
+* Es necesario que autostart.sh sea ejecutable
+

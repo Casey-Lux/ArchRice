@@ -1,6 +1,3 @@
-# Alex108-lab
-# Theming for Qtile
-
 from os import path
 import subprocess
 import json
@@ -27,6 +24,4 @@ def load_theme():
     with open(path.join(theme_file)) as f:
         return json.load(f)
 
-
-if __name__ == "settings.theme":
     colors = load_theme()

@@ -1,8 +1,7 @@
-#Alex108-lab
 # Qtile keybindings
 
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile import extension
 
 
@@ -44,7 +43,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "control"], "r", lazy.restart()),
 
     ([mod, "control"], "q", lazy.shutdown()),
-    ([mod], "r", lazy.spawncmd()),
+    ([mod], "p", lazy.spawncmd()),
 
     # ArcoLinux Logout
     #([mod], "x", lazy.spawn("arcolinux-logout")),
@@ -86,7 +85,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "z", lazy.spawn("scrot")),
 
     #Wallpaper
-    ([mod], "x", lazy.spawn("/home/user0/wallpapers/wallpaper.py")),
+    ([mod], "x", lazy.spawn("~/wallpapers/wallpaper.py")),
 
     # ------------ Hardware Configs ------------
 

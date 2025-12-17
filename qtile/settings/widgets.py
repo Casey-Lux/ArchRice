@@ -3,10 +3,10 @@ from settings.theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
-def base(fg='text', bg='dark'): 
+def base(fg='text', bg='dark'):
     return {
-        'foreground': colors[fg],
-        'background': colors[bg]
+        'foreground': colors[fg][0] if isinstance(colors[fg], list) else colors[fg],
+        'background': colors[bg][0] if isinstance(colors[bg], list) else colors[bg],
     }
 
 
@@ -102,7 +102,7 @@ primary_widgets = [
 
     powerline('dark', 'color1'),
 
-    widget.Battery(background=colors['dark'], padding=5, format='{char} {percent:2.0%}'),
+    #widget.Battery(background=colors['dark'], padding=5, format='{char} {percent:2.0%}'),
 ]
 
 secondary_widgets = [

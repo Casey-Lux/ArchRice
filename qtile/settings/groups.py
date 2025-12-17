@@ -1,8 +1,7 @@
-#Alex108-lab
 # Qtile workspaces
 
 from libqtile.config import Key, Group
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from settings.keys import mod, keys
 
 

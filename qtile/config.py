@@ -1,7 +1,6 @@
 # Qtile Config File
 # http://www.qtile.org/
 
-# Alex108-lab
 
 from libqtile import hook
 
@@ -21,7 +20,7 @@ import subprocess
 def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
 
-main = None
+main = None # Posible linea a borrar
 dgroups_key_binder = None
 dgroups_app_rules = []
 follow_mouse_focus = True

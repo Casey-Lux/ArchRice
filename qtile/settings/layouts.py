@@ -1,5 +1,3 @@
-#Alex108-lab
-
 from libqtile import layout
 from libqtile.config import Match
 from settings.theme import colors
