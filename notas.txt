@@ -32,10 +32,10 @@ alacritty
 screenfetch -> Puro lujo, nada más
 
 ### Paquetes de utilidad (done)
-git
+git -> Ya debería estar para clonar el repositorio
 neovim
 
-### Configuración de qtile
+### Configuración de qtile (done)
 git clone https://github.com/Casey-Lux/ArchRice
 * Será necesario copiar los archivos de configuración a sus directorios
 * Es necesario que autostart.sh sea ejecutable
@@ -43,8 +43,10 @@ git clone https://github.com/Casey-Lux/ArchRice
 * Es necesario instalar las fuentes
 $ sudo pacman -Sy ttf-ubuntu-mono-nerd ttf-nerd-fonts-symbols ttf-fira-code
 	
-### Paquetes para el sistema
+### Paquetes para el sistema (done)
 firefox -> navegador
 thunar -> explorador de archivos gráfico
 scrot -> capturas de pantalla
+
+
 
