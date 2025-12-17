@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# systray battery icon
-cbatticon -u 5 &
-# systray volume
-#volumeicon &
+# Teclado
+setxkbmap es &
 
-#nm-applet &
+# DPI
+xrandr --dpi 96 &
 
-setxkbmap es
-xrandr -s 17
-/home/user0/wallpapers/wallpaper.py
-picom -f --no-vsync &
+# Wallpapers
+/home/user0/wallpapers/wallpaper.py &
+
+# picom: --no-vsync
+picom -f &
