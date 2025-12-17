@@ -9,7 +9,7 @@ def base(fg='text', bg='dark'):
         'background': colors[bg][0] if isinstance(colors[bg], list) else colors[bg],
     }
 
-
+# Draws a space
 def separator():
     return widget.Sep(**base(), linewidth=0, padding=5)
 
@@ -26,7 +26,7 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
+        text="  ", # Icon: nf-oct-triangle_left
         fontsize=37,
         padding=-2
     )
@@ -44,8 +44,8 @@ def workspaces():
             padding_y=8,
             padding_x=5,
             borderwidth=1,
-            active=colors['active'],
-            inactive=colors['inactive'],
+            active=colors['active'][0],
+            inactive=colors['inactive'][0],
             rounded=False,
             highlight_method='block',
             urgent_alert_method='block',
@@ -69,7 +69,7 @@ primary_widgets = [
 
     powerline('color4', 'dark'),
 
-    widget.TextBox(**base(bg='color4'), text=' rchLinux'),
+    widget.TextBox(**base(bg='color4'), text=' ArchLinux'),
 
     # icon(bg="color4", text=' '), # Icon: nf-fa-download 
     # widget.CheckUpdates(
@@ -103,24 +103,6 @@ primary_widgets = [
     powerline('dark', 'color1'),
 
     #widget.Battery(background=colors['dark'], padding=5, format='{char} {percent:2.0%}'),
-]
-
-secondary_widgets = [
-    *workspaces(),
-
-    separator(),
-
-    powerline('color1', 'dark'),
-
-    #widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
-
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
-
-    powerline('color2', 'color1'),
-
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
-
-    powerline('dark', 'color2'),
 ]
 
 widget_defaults = {
