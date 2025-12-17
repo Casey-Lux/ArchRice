@@ -20,9 +20,9 @@ import subprocess
 def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
 
-main = None # Posible linea a borrar
-dgroups_key_binder = None
-dgroups_app_rules = []
+#main = None # Posible linea a borrar
+#dgroups_key_binder = None
+#dgroups_app_rules = []
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = True

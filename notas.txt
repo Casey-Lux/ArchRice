@@ -39,4 +39,12 @@ neovim
 git clone https://github.com/Casey-Lux/ArchRice
 * Será necesario copiar los archivos de configuración a sus directorios
 * Es necesario que autostart.sh sea ejecutable
+* Es necesario incluir el directorio de wallpapers
+* Es necesario instalar las fuentes
+$ sudo pacman -Sy ttf-ubuntu-mono-nerd ttf-nerd-fonts-symbols ttf-fira-code
+	
+### Paquetes para el sistema
+firefox -> navegador
+thunar -> explorador de archivos gráfico
+scrot -> capturas de pantalla
 

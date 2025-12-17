@@ -3,6 +3,7 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from libqtile import extension
+import os
 
 
 mod = "mod4"
@@ -61,46 +62,30 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
         #dmenu_height=24,  # Only supported by some dmenu forks
     ))),
 
-    # Window Nav
-    #([mod, "shift"], "m", lazy.spawn("rofi -show")),
-
     # Browser
-    #([mod], "b", lazy.spawn("chromium")),
-    #([mod, "control"], "b", lazy.spawn("vivaldi-stable")),
     ([mod], "b", lazy.spawn("firefox")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("thunar")),
-    # ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
     ([mod, "shift"], "Return", lazy.spawn("kitty")),
 
-    # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
-    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
-
     # Screenshot
     ([mod], "z", lazy.spawn("scrot")),
 
-    #Wallpaper
-    ([mod], "x", lazy.spawn("~/wallpapers/wallpaper.py")),
+    # Change Wallpaper randomly
+    ([mod], "x", lazy.spawn(os.path.expanduser("~/wallpapers/wallpaper.py"))),
 
     # ------------ Hardware Configs ------------
 
     # Volume
-    ([], "XF86AudioLowerVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    )),
-    ([], "XF86AudioRaiseVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    )),
-    ([], "XF86AudioMute", lazy.spawn(
-        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    )),
+    ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+    ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+    ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
 
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +3%")),
-    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 3%-")),
+    ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set -3%")),
 ]]
