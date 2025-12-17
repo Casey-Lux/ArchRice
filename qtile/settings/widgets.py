@@ -1,4 +1,5 @@
 from libqtile import widget
+import subprocess
 from settings.theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -73,9 +74,17 @@ primary_widgets = [
 
     powerline('color3', 'color4'),
 
-    icon(bg='color3', text=' '),
+    icon(bg='color3', text=''),
     
-    widget.Net(interface="ens33", format="{ip}", **base(bg='color3')),
+    widget.GenPollText(
+        func=lambda: subprocess.check_output(
+           "ip -4 addr show ens33 | grep -oE 'inet [0-9.]+' | awk '{print $2}'",
+           shell=True
+        ).decode().strip(),
+        #func=lambda: "TEST",
+        update_interval=15,
+        **base(bg='color3')
+    ),
 
     powerline('color2', 'color3'),
 
