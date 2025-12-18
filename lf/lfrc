@@ -1,15 +1,13 @@
 # ===============================
-# General
+# Core
 # ===============================
 set hidden
 set icons
 set ignorecase
 set drawbox
 set preview
-set scrolloff 4
+set scrolloff 3
 set info size:time
-
-# Menos ruido visual
 set ratios 1:3:4
 
 # ===============================
@@ -24,31 +22,26 @@ map G bottom
 map q quit
 
 # ===============================
-# Comportamiento sano
-# ===============================
-set confirmquit true
-set cleaner '~/.config/lf/cleaner.sh'
-set previewer '~/.config/lf/previewer.sh'
-
-# ===============================
-# Abrir archivos con criterio
+# Abrir archivos
 # ===============================
 cmd open ${{
     case "$(file --mime-type -Lb "$f")" in
         text/*)
             ${EDITOR:-nvim} "$f"
             ;;
-        image/*)
-            feh "$f"
-            ;;
-        video/*|audio/*)
-            mpv "$f"
-            ;;
         application/pdf)
             zathura "$f"
+            ;;
+        image/*|video/*|audio/*)
+            xdg-open "$f"
             ;;
         *)
             xdg-open "$f"
             ;;
     esac
 }}
+
+# ===============================
+# Previewer
+# ===============================
+set previewer '~/.config/lf/previewer.sh'

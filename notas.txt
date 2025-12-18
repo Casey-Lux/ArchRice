@@ -68,7 +68,7 @@ tmux
 
 btop -> alige un tema desde las opciones
 lf:
-sudo pacman -S lf ueberzug bat highlight
+sudo pacman -S lf bat poppler
 
 
 * Es necesario activar las opciones de copiado y pegado en la vm (falló el copiar y pegar)
