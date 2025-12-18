@@ -27,7 +27,7 @@ map q quit
 cmd open ${{
     case "$(file --mime-type -Lb "$f")" in
         text/*)
-            ${EDITOR:-nvim} "$f"
+            nvim "$f"
             ;;
         application/pdf)
             zathura "$f"
