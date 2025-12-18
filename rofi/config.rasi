@@ -1,0 +1,9 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{name}";
+    font: "monospace 11";
+}
+
+@theme "Arc-Dark"

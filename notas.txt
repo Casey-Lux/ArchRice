@@ -75,6 +75,9 @@ sudo pacman -S lf bat poppler
 
 * Instalación de powerlevel10k con instant prompt (done)
 
+### rofi 
+sudo pacman -S rofi
+
 
 
 
