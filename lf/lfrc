@@ -1,0 +1,54 @@
+# ===============================
+# General
+# ===============================
+set hidden
+set icons
+set ignorecase
+set drawbox
+set preview
+set scrolloff 4
+set info size:time
+
+# Menos ruido visual
+set ratios 1:3:4
+
+# ===============================
+# Navegación (vim-like)
+# ===============================
+map h updir
+map l open
+map J half-down
+map K half-up
+map gg top
+map G bottom
+map q quit
+
+# ===============================
+# Comportamiento sano
+# ===============================
+set confirmquit true
+set cleaner '~/.config/lf/cleaner.sh'
+set previewer '~/.config/lf/previewer.sh'
+
+# ===============================
+# Abrir archivos con criterio
+# ===============================
+cmd open ${{
+    case "$(file --mime-type -Lb "$f")" in
+        text/*)
+            ${EDITOR:-nvim} "$f"
+            ;;
+        image/*)
+            feh "$f"
+            ;;
+        video/*|audio/*)
+            mpv "$f"
+            ;;
+        application/pdf)
+            zathura "$f"
+            ;;
+        *)
+            xdg-open "$f"
+            ;;
+    esac
+}}

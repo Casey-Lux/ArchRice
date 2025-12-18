@@ -66,8 +66,10 @@ sudo pacman -S tmux
 tmux
 * Copiar el archivo de configuración de tmux (done)
 
-btop
-ranger vs lf
+btop -> alige un tema desde las opciones
+lf:
+sudo pacman -S lf ueberzug bat highlight
+
 
 * Es necesario activar las opciones de copiado y pegado en la vm (falló el copiar y pegar)
 
