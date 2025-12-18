@@ -71,6 +71,8 @@ ranger vs lf
 
 * Es necesario activar las opciones de copiado y pegado en la vm (falló el copiar y pegar)
 
+* Instalación de powerlevel10k con instant prompt (done)
+
 
 
 
