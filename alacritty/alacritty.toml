@@ -4,7 +4,8 @@ TERM = "xterm-256color"
 [window]
 title = "Mafuyu"
 decorations = "full"
-opactiy = 1.0
+opacity = 1.0
+dynamic_padding = false
 
 [window.dimensions]
 columns = 150
@@ -13,8 +14,6 @@ lines = 35
 [window.padding]
 x = 6
 y = 6
-
-dynamic_padding = false
 
 [scrolling]
 history = 5000
@@ -41,8 +40,6 @@ style = "Bold Italic"
 [font.offset]
 x = 0
 y = 1
-
-draw_bold_text_with_bright_colors = true
 
 [cursor]
 style = "Block"
@@ -84,31 +81,33 @@ magenta = "#cba6f7" # rosa/violeta puntual
 cyan = "#89ddff" 
 white = "#ffffff"
 
-[[key_bindings]] 
-key = "V" 
-mods = "Control|Shift" 
+[keyboard]
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
 action = "Paste"
 
-[[key_bindings]] 
-key = "C" 
-mods = "Control|Shift" 
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
 action = "Copy"
 
-[[key_bindings]] 
-key = "Equals" 
-mods = "Control" 
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
 action = "IncreaseFontSize"
 
-[[key_bindings]] 
-key = "Minus" 
-mods = "Control" 
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
 action = "DecreaseFontSize"
 
-[[key_bindings]] 
-key = "Key0" 
-mods = "Control" 
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
 action = "ResetFontSize"
 
-[[key_bindings]] 
-key = "F11" 
+[[keyboard.bindings]]
+key = "F11"
 action = "ToggleFullscreen"
