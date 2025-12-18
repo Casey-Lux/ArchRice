@@ -51,16 +51,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # ------------ App Configs ------------
 
-    # Menu
-    ([mod], "m", lazy.run_extension(extension.DmenuRun(
-        dmenu_prompt=">",
-        dmenu_font="fira code medium-10",
-        background="#15181a",
-        foreground="#1979e5",
-        selected_background="#1979e5",
-        selected_foreground="#fff",
-        #dmenu_height=24,  # Only supported by some dmenu forks
-    ))),
+    # Menu rofi
+    ([mod], "space", lazy.spawn("rofi -show drun")),
 
     # Browser
     ([mod], "b", lazy.spawn("firefox")),
