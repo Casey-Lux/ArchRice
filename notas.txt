@@ -49,12 +49,24 @@ thunar -> explorador de archivos gráfico
 scrot -> capturas de pantalla
 
 *** Antes será necesario arreglar el problema del foco (done)
-* Agregar una configuración correcta para picom 
+* Agregar una configuración correcta para picom (done)
 
 ### Paquetes para la terminal
-zsh
-ohmyzsh
+zsh:
+sudo pacman -S zsh
+chsh -s /usr/bin/zsh
+
+ohmyzsh:
+sudo pacman -S curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
 tmux
 btop
 ranger vs lf
+
+
+
+
+
 
