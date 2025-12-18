@@ -13,4 +13,4 @@ xrandr --output Virtual-1 --mode 1366x768 & # <- Adjust this for your screen
 /home/user0/wallpapers/wallpaper.py &
 
 # picom: --no-vsync
-picom -f &
+# picom -f &

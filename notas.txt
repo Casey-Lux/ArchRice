@@ -48,5 +48,13 @@ firefox -> navegador
 thunar -> explorador de archivos gráfico
 scrot -> capturas de pantalla
 
+*** Antes será necesario arreglar el problema del foco (done)
+* Agregar una configuración correcta para picom 
 
+### Paquetes para la terminal
+zsh
+ohmyzsh
+tmux
+btop
+ranger vs lf
 
