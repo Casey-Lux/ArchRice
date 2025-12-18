@@ -1,53 +1,114 @@
-[env] TERM = "xterm-256color"
+[env]
+TERM = "xterm-256color"
 
-[window] title = "Mafuyu" decorations = "full" opactiy = 1.0
+[window]
+title = "Mafuyu"
+decorations = "full"
+opactiy = 1.0
 
-[window.dimensions] columns = 150 lines = 35
+[window.dimensions]
+columns = 150
+lines = 35
 
-[window.padding] x = 6 y = 6
+[window.padding]
+x = 6
+y = 6
 
 dynamic_padding = false
 
-[scrolling] history = 5000
+[scrolling]
+history = 5000
 
-[font] size = 12.0
+[font]
+size = 12.0
 
-[font.normal] family = "Fira Code" style = "Regular"
+[font.normal]
+family = "Fira Code"
+style = "Regular"
 
-[font.bold] family = "Fira Code" style = "Bold"
+[font.bold]
+family = "Fira Code"
+style = "Bold"
 
-[font.italic] family = "Fira Code" style = "Italic"
+[font.italic]
+family = "Fira Code"
+style = "Italic"
 
-[font.bold_italic] family = "Fira Code" style = "Bold Italic"
+[font.bold_italic]
+family = "Fira Code"
+style = "Bold Italic"
 
-[font.offset] x = 0 y = 1
+[font.offset]
+x = 0
+y = 1
 
 draw_bold_text_with_bright_colors = true
 
-[cursor] style = "Block" unfocused_hollow = true
+[cursor]
+style = "Block"
+unfocused_hollow = true
 
-[selection] save_to_clipboard = false
+[selection]
+save_to_clipboard = false
 
-[colors.primary] background = "#0f1419" # azul noche profundo foreground = "#d8e2ec" # blanco frío
+[colors.primary]
+background = "#0f1419" # azul noche profundo
+foreground = "#d8e2ec" # blanco frío
 
-[colors.cursor] text = "#0f1419" cursor = "#7aa2f7" # azul hielo
+[colors.cursor]
+text = "#0f1419"
+cursor = "#7aa2f7" # azul hielo
 
-[colors.selection] text = "#d8e2ec" background = "#1f2933"
+[colors.selection]
+text = "#d8e2ec"
+background = "#1f2933"
 
-[colors.normal] black = "#0b0f14" red = "#e06c75" # rojo apagado
+[colors.normal]
+black = "#0b0f14"
+red = "#e06c75" # rojo apagado
 
-green = "#9ece6a" yellow = "#e0af68" blue = "#7aa2f7" # azul dominante magenta = "#bb9af7" # violeta suave cyan = "#7dcfff" white = "#c0caf5"
+green = "#9ece6a" 
+yellow = "#e0af68" 
+blue = "#7aa2f7" # azul dominante 
+magenta = "#bb9af7" # violeta suave 
+cyan = "#7dcfff" 
+white = "#c0caf5"
 
-[colors.bright] black = "#3b4261" red = "#f7768e" green = "#b9f27c" yellow = "#ff9e64" blue = "#89b4fa" magenta = "#cba6f7" # rosa/violeta puntual cyan = "#89ddff" white = "#ffffff"
+[colors.bright] 
+black = "#3b4261" 
+red = "#f7768e" 
+green = "#b9f27c" 
+yellow = "#ff9e64" 
+blue = "#89b4fa" 
+magenta = "#cba6f7" # rosa/violeta puntual 
+cyan = "#89ddff" 
+white = "#ffffff"
 
-[[key_bindings]] key = "V" mods = "Control|Shift" action = "Paste"
+[[key_bindings]] 
+key = "V" 
+mods = "Control|Shift" 
+action = "Paste"
 
-[[key_bindings]] key = "C" mods = "Control|Shift" action = "Copy"
+[[key_bindings]] 
+key = "C" 
+mods = "Control|Shift" 
+action = "Copy"
 
-[[key_bindings]] key = "Equals" mods = "Control" action = "IncreaseFontSize"
+[[key_bindings]] 
+key = "Equals" 
+mods = "Control" 
+action = "IncreaseFontSize"
 
-[[key_bindings]] key = "Minus" mods = "Control" action = "DecreaseFontSize"
+[[key_bindings]] 
+key = "Minus" 
+mods = "Control" 
+action = "DecreaseFontSize"
 
-[[key_bindings]] key = "Key0" mods = "Control" action = "ResetFontSize"
+[[key_bindings]] 
+key = "Key0" 
+mods = "Control" 
+action = "ResetFontSize"
 
-[[key_bindings]] key = "F11" action = "ToggleFullscreen"
+[[key_bindings]] 
+key = "F11" 
+action = "ToggleFullscreen"
