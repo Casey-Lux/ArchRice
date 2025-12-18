@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Keys
-setxkbmap es &
+setxkbmap latam &
 
 # DPI
 xrandr --dpi 96 &
