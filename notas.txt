@@ -53,19 +53,23 @@ scrot -> capturas de pantalla
 
 ### Paquetes para la terminal
 zsh:
-sudo pacman -S zsh
-chsh -s /usr/bin/zsh
+sudo pacman -S --noconfirm zsh
+chsh -s /usr/bin/zsh "$USER"
 
 ohmyzsh:
 sudo pacman -S curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 
+tmux:
+sudo pacman -S tmux
 tmux
+* Copiar el archivo de configuración de tmux (done)
+
 btop
 ranger vs lf
 
-
+* Es necesario activar las opciones de copiado y pegado en la vm (falló el copiar y pegar)
 
 
 
