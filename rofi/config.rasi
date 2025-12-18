@@ -6,4 +6,4 @@ configuration {
     font: "monospace 11";
 }
 
-@theme "Arc-Dark"
+@theme "material"
