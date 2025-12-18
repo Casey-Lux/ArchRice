@@ -52,7 +52,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu rofi
-    ([mod], "space", lazy.spawn("rofi -show drun")),
+    ([mod], "m", lazy.spawn("rofi -show drun")),
 
     # Browser
     ([mod], "b", lazy.spawn("firefox")),
