@@ -80,6 +80,14 @@ echo "===> Instalando tema Powerlevel10k"
 git clone https://github.com/romkatv/powerlevel10k.git \
 "$ZSH_CUSTOM/themes/powerlevel10k"
 
+echo "===> Copiando configuración de alacritty"
+mkdir -p "$CONFIG_DIR/alacritty"
+cp "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml"
+
+echo "===> Copiando configuración de picom"
+mkdir -p "$CONFIG_DIR/picom"
+cp "$REPO_DIR/picom/picom.conf" "$CONFIG_DIR/picom/picom.conf"
+
 echo "===> Copiando configuración de Zsh"
 cp "$REPO_DIR/zsh/.zshrc" "$HOME/.zshrc"
 cp "$REPO_DIR/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
