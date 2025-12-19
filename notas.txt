@@ -26,7 +26,7 @@ win + ctrl + q -> para salir de qtile y volver a la terminal
 ### Paquetes necesarios para mi configuración de qtile (done)
 picom 
 feh 
-dmenu 
+dmenu -> lo cambiamos por rofi, ya no será necesario
 lightdm -> inicio gráfico, se puede eliminar / descartar 
 alacritty 
 screenfetch -> Puro lujo, nada más
@@ -75,7 +75,7 @@ sudo pacman -S lf bat poppler
 
 * Instalación de powerlevel10k con instant prompt (done)
 
-### rofi 
+### rofi  (done)
 sudo pacman -S rofi
 
 
