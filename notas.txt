@@ -29,6 +29,7 @@ feh
 dmenu -> lo cambiamos por rofi, ya no será necesario
 lightdm -> inicio gráfico, se puede eliminar / descartar 
 alacritty 
+xterm -> terminal por si alacritty falla
 screenfetch -> Puro lujo, nada más
 
 ### Paquetes de utilidad (done)
